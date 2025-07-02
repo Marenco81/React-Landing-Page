@@ -21,7 +21,7 @@ export const Navbar = () => {
                     <img src={logo} alt="logo" className="h-10 w-10 mr-2" />
                     <span className='text-xl tracking-tight'>Logo</span>
                 </div>
-                <NavItem></NavItem>
+                <NavItem classname=''></NavItem>
                 <div className='hidden lg:flex justify-center space-x-12 items-center ml-6 '>
                     <a href="#" className='py-2 px-3 border rounded-md hover:bg-amber-50 hover:text-black hover:rounded-md hover:font-semibold '>
                         Sign In
@@ -36,6 +36,19 @@ export const Navbar = () => {
                     </button>
                 </div>
             </div>
+            {mobileDrawerOpen && (
+                <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex-col justify-center items-center lg:hidden">
+                    <NavItem classname='md:flex flex-col justify-center items-center text-center md:ml-0 md:space-x-0 gap-6'></NavItem>
+                    <div className='flex justify-center space-x-12 items-center ml-6 mt-10'>
+                    <a href="#" className='py-2 px-3 border rounded-md hover:bg-amber-50 hover:text-black hover:rounded-md hover:font-semibold '>
+                        Sign In
+                    </a>
+                    <a href="#" className='bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 ml-2 rounded-md hover:scale-105'>
+                        Create an account
+                    </a>
+                </div>
+                </div>
+            )}
         </div>
     </nav>
   )
