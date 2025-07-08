@@ -2,6 +2,7 @@ import { useState } from 'react';
 import {Menu, X} from 'lucide-react';
 import logo from '../assets/logo.png';
 import { NavItem } from './NavItem';
+import { navItems } from '../constants';
 
 export const Navbar = () => {
 
@@ -37,8 +38,15 @@ export const Navbar = () => {
                 </div>
             </div>
             {mobileDrawerOpen && (
-                <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex-col justify-center items-center lg:hidden">
-                    <NavItem classname='md:flex flex-col justify-center items-center text-center md:ml-0 md:space-x-0 gap-6'></NavItem>
+                <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
+                    {/* <NavItem classname='sm:flex flex-col justify-center items-center text-center md:ml-0 md:space-x-0 gap-6'></NavItem> */}
+                    <ul>
+                        {navItems.map((item, index) => (
+                            <li className='py-4' key={index}>
+                                <a href={item.href}> {item.label} </a>
+                            </li>
+                        ))}
+                    </ul>
                     <div className='flex justify-center space-x-12 items-center ml-6 mt-10'>
                     <a href="#" className='py-2 px-3 border rounded-md hover:bg-amber-50 hover:text-black hover:rounded-md hover:font-semibold '>
                         Sign In
