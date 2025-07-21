@@ -1,7 +1,8 @@
 
 
+export * from './FeaturesSection';
+export * from './Hero';
 export * from './Navbar';
 export * from './NavItem';
-export * from './Hero';
-export * from './FeaturesSection';
+export * from './Pricing';
 export * from './Workflow';
