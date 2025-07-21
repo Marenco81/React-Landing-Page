@@ -1,4 +1,4 @@
-import { FeaturesSection, Hero, Navbar, Pricing, Workflow } from "./components"
+import { FeaturesSection, Hero, Navbar, Pricing, Testimonials, Workflow } from "./components"
 
 export const App = () => {
   return (
@@ -9,6 +9,7 @@ export const App = () => {
           <FeaturesSection></FeaturesSection>
           <Workflow></Workflow>
           <Pricing></Pricing>
+          <Testimonials></Testimonials>
          </div>
     </div>
   )
